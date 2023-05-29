@@ -65,7 +65,7 @@ class ProductManager {
       this.saveProducts();
       console.log(`Producto con ID ${id} actualizado`);
     } else {
-      console.log(`No se encontró un producto con ID ${id}`);
+      console.log(`No se encontró un producto ${id}`);
     }
   }
 
@@ -74,14 +74,14 @@ class ProductManager {
     if (index !== -1) {
       this.products.splice(index, 1);
       this.saveProducts();
-      console.log(`Producto con ID ${id} eliminado`);
+      console.log(`Producto ${id} eliminado`);
     } else {
-      console.log(`No se encontró un producto con ID ${id}`);
+      console.log(`No se encontró un producto ${id}`);
     }
   }
 }
 
-// Ejemplo de uso
+// ejmplo para usar
 const productManager = new ProductManager('products.json');
 
 const product1 = {
