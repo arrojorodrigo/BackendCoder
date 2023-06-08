@@ -70,5 +70,23 @@
     "thumbnail": "ABCDE",
     "code": "121",
     "stock": 8
+  },
+  {
+    "id": 1,
+    "title": "BACON",
+    "description": "Hamburguesa de tocino",
+    "price": 3000,
+    "thumbnail": "ABCD",
+    "code": "120",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "title": "SMOG",
+    "description": "Hamburguesa de barbacoa",
+    "price": 3200,
+    "thumbnail": "ABCDE",
+    "code": "121",
+    "stock": 8
   }
 ]

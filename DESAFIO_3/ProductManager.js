@@ -85,7 +85,6 @@ class ProductManager {
   }
 }
 
-// Ejemplo para usar
 const productManager = new ProductManager('products.json');
 
 const product1 = {
@@ -109,12 +108,21 @@ const product2 = {
 productManager.addProduct(product1);
 productManager.addProduct(product2);
 
-console.log(productManager.getProducts());
+app.get('/products', (req, res) => {
+  const limit = parseInt(req.query.limit) || null;
+  const products = productManager.getProducts(limit);
+  res.json(products);
+});
 
-const productIdToDelete = 2;
-productManager.deleteProduct(productIdToDelete);
-
-console.log(productManager.getProducts());
+app.get('/products/:pid', (req, res) => {
+  const productId = parseInt(req.params.pid);
+  const product = productManager.getProductById(productId);
+  if (product) {
+    res.json(product);
+  } else {
+    res.status(404).json({ error: 'Producto no encontrado' });
+  }
+});
 
 app.listen(port, () => {
   console.log(`Servidor Express iniciado en el puerto ${port}`);
