@@ -1,5 +1,9 @@
 
-import Express from "express";
+const express = require('express');
+const fs = require('fs');
+
+const app = express();
+const port = 3000;
 
 class ProductManager {
   products;
@@ -81,7 +85,7 @@ class ProductManager {
   }
 }
 
-// ejmplo para usar
+// Ejemplo para usar
 const productManager = new ProductManager('products.json');
 
 const product1 = {
@@ -111,3 +115,7 @@ const productIdToDelete = 2;
 productManager.deleteProduct(productIdToDelete);
 
 console.log(productManager.getProducts());
+
+app.listen(port, () => {
+  console.log(`Servidor Express iniciado en el puerto ${port}`);
+});
