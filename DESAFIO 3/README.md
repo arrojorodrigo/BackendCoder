@@ -1,6 +1,6 @@
-# Desafio 2 
+# Desafio 3 
 # Backend coderhouse
 
-!¡ Utilizar *fileSystem* para  el manejo de archivos y cambiar el modelo de persistencia
+!¡ Utilizar servidor *Express*
 
 Alumno Rodrigo Medina Arrojo
